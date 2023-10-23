@@ -43,6 +43,26 @@ const cards = [
     },
 ]
 
+const rowEl = document.querySelector(".row");
+
 for (let i = 0; i < cards.length; i++) {
     console.log(cards[i]);
+    printCol(cards[i]);
+}
+
+function printCol(card) {
+    const col = document.createElement('div');
+    col.classList.add('col-4');
+    const template =
+    `
+    <div class="card text-start">
+        <img class="card-img-top" src="img/${card.picture}" alt="Title">
+        <div class="card-body">
+        <h4 class="card-title">${card.name}</h4>
+        <p class="card-text">${card.role}</p>
+        </div>
+    </div>
+    `
+    col.innerHTML = template;
+    rowEl.append(col);
 }
