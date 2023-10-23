@@ -41,21 +41,21 @@ const cards = [
         role: "Graphic Designer",
         picture: "barbara-ramos-graphic-designer.jpg"
     },
-]
+];
 
 const rowEl = document.querySelector(".row");
 
 for (let i = 0; i < cards.length; i++) {
     console.log(cards[i]);
     printCol(cards[i]);
-}
+};
 
 function printCol(card) {
     const col = document.createElement('div');
-    col.classList.add('col-4');
+    col.classList.add('col-4', 'mt-4');
     const template =
     `
-    <div class="card text-start">
+    <div class="card text-center">
         <img class="card-img-top" src="img/${card.picture}" alt="Title">
         <div class="card-body">
         <h4 class="card-title">${card.name}</h4>
@@ -65,4 +65,4 @@ function printCol(card) {
     `
     col.innerHTML = template;
     rowEl.append(col);
-}
+};
