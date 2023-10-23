@@ -42,3 +42,7 @@ const cards = [
         picture: "barbara-ramos-graphic-designer.jpg"
     },
 ]
+
+for (let i = 0; i < cards.length; i++) {
+    console.log(cards[i]);
+}
