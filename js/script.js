@@ -77,4 +77,11 @@ btnSubmit.addEventListener('click', function(){
     console.log(newCard);
     cards.push(newCard);
     printCol(newCard);
+    reset();
 })
+
+function reset(){
+    document.getElementById('nome').value = '';
+    document.getElementById('ruolo').value = '';
+    document.getElementById('immagine').value = '';    
+}
