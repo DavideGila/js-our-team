@@ -66,3 +66,15 @@ function printCol(card) {
     col.innerHTML = template;
     rowEl.append(col);
 };
+
+const btnSubmit = document.querySelector('button');
+btnSubmit.addEventListener('click', function(){
+    const newCard = {
+        name: document.getElementById('nome').value,
+        role: document.getElementById('ruolo').value,
+        picture: document.getElementById('immagine').value
+    }
+    console.log(newCard);
+    cards.push(newCard);
+    printCol(newCard);
+})
